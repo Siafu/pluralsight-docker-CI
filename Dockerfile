@@ -12,6 +12,7 @@ RUN yum install -y npm
 COPY . /src
 
 # Install app and dependencies into /src
+RUN npm config set registry http://registry.npmjs.org/
 RUN cd /src; npm install
 
 EXPOSE 8080
